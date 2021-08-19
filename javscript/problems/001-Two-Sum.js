@@ -35,13 +35,13 @@ Output: [0,1]
 // Time complexity - O(n^2)
 
 const twoSum = (nums, target) => {
-	for (let i = 0; i < nums.length; i++) {
-		for (let j = 0; j < nums.length; j ++) {
-			if (i != j && (nums[i] + nums[j] == target)) {
-				return [i,j]
-			}
-		}
-	}
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = 0; j < nums.length; j ++) {
+      if (i != j && (nums[i] + nums[j] == target)) {
+        return [i,j]
+      }
+    }
+  }
 };
 
 
@@ -51,14 +51,13 @@ const twoSum = (nums, target) => {
 // Adding numbers to a hashmap as we iterate against their indices. This will allow us to lookup the numbers in O(1) complexity.
 
 const twoSum = (nums, target) => {
-	let numsHash = {};
+  let numsHash = {};
 
-	for (let i = 0; i < nums.length; i++) {
-		if (numsHash[target - nums[i]] != null) {
-			return [ numsHash[target - nums[i]], i ];
-		}
+  for (let i = 0; i < nums.length; i++) {
+    if (numsHash[target - nums[i]] != null) {
+      return [ numsHash[target - nums[i]], i ];
+    }
 
-		numsHash[nums[i]] = i
-	}
-
+    numsHash[nums[i]] = i
+  }
 }
