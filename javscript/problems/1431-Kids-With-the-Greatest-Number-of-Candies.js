@@ -60,3 +60,14 @@ const kidsWithCandies = (candies, extraCandies) => {
   const maxCandies = Math.max(...candies);
   return candies.map(candy => (candy + extraCandies >= maxCandies) ? true : false);
 };
+
+// Solution 3
+// One Liner
+// Time Complexity - O(N)
+
+const kidsWithCandies = (
+  candies,
+  extraCandies,
+  maxCandies = Math.max(...candies)
+) =>
+  candies.map((candy) => (candy + extraCandies >= maxCandies ? true : false));ß
