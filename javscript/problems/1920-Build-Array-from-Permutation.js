@@ -41,7 +41,7 @@ const buildArray = (nums) => {
   return result;
 };
 
-// Solution 1
+// Solution 2
 // Bruteforce Solution
 // Time Complexity - O(n)
 // Space Complexity - O(1)
